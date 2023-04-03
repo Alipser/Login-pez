@@ -1,0 +1,90 @@
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+
+.login-container {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./img/bg-login.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.login-container .pez {
+  position: absolute;
+  width: 200px;
+}
+
+.login-container .pez:nth-child(1) {
+  left: -200px;
+  bottom: 20px;
+  animation: pez1 20s linear infinite;
+}
+
+.login-container .pez:nth-child(2) {
+  right: 20px;
+  top: 20px;
+  width: 100px;
+  animation: pez2 40s linear infinite;
+}
+
+.login {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #FAFAFA50;
+  padding: 30px 40px;
+  border-radius: 50px;
+  backdrop-filter: blur(.7em);
+  text-align: center;
+}
+
+.login img {
+  position: relative;
+  width: 300px;
+  margin-right: 40px;
+}
+
+.btn-login {
+  padding: 15px 30px;
+  background: #C3D730;
+  color: #FAFAFA;
+  border-radius: 50px;
+  border: none;
+  font-size: 18px;
+}
+
+
+@keyframes pez1 {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translate(2000px, -200px);
+  }
+}
+
+
+
+@keyframes pez2 {
+
+  100% {
+    transform: translate(-1000px, 200px);
+  }
+}
